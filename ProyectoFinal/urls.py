@@ -20,6 +20,6 @@ from .view import equipo_nuevo
 
 urlpatterns = [
     path('equipo/nuevo/', equipo_nuevo, name='equipo_nuevo'),
-    path('tu_aplicacion/', include('tu_aplicacion.urls')),
+    path('ProyectoFinal/', include('ProyectoFinal.urls')),
     path('admin/', admin.site.urls),
     ]

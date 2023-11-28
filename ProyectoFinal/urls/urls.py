@@ -18,10 +18,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import equipo_nuevo  
+from views import equipo_nuevo  
+from models import lista_equipos 
+
+app_name = 'ProyectoFinal'
 
 urlpatterns = [
     path('equipo/nuevo/', equipo_nuevo, name='equipo_nuevo'),
     path('ProyectoFinal/', include('ProyectoFinal.urls')),  
     path('admin/', admin.site.urls),
+    path('equipos/', lista_equipos, name='lista_equipos'),
+
 ]
